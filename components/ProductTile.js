@@ -50,7 +50,7 @@ const JewelryTile = ({ jewelry }) => {
         <img src={JewelryImageUrl} alt={JewelryName} className="w-full h-48 object-cover mb-4" />
         <div>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">{JewelryName}</h3>
-          <p className="text-lg font-bold text-gray-800 mb-2">${Price}</p>
+          <p className="text-lg font-bold text-gray-800 mb-2">KSH{Price}</p>
           <p className="text-gray-600 mb-4">{Description}</p>
           <button
             onClick={handleAddToCart}

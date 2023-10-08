@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar';
 import ProductTile from '../components/ProductTile';
 import Navbar from '../components/Navbar';
 import JewelryTile from '../components/ProductTile';
-
+import Footer from '@/components/Footer';
 
 const Home = () => {
 
@@ -185,6 +185,7 @@ const searchProducts = async (query) => {
 
       </div>
     </div>
+    <Footer />
     </>
   );
         }

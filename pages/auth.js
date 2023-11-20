@@ -17,6 +17,7 @@
 import React, { useState, useEffect } from 'react';
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import Link from 'next/link'; // Import Link from Next.js
 
 // TODO: Replace with your app's Firebase project configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -74,6 +75,9 @@ if (user) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-100">
         <p className="text-2xl font-bold">Welcome, {user.email}!</p>
+        <Link href="/order-history">
+          <a className="text-blue-500 hover:text-blue-700">View Order History</a>
+        </Link>
       </div>
     );
   }

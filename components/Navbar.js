@@ -85,8 +85,10 @@
 import React, { useState } from 'react';
 import { FaUserCircle, FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 import AuthComponent from './FirebaseAuth';
+import { useCart } from '@/contexts/CartContext';
 const Navbar = () => {
   const [showAuth, setShowAuth] = useState(false);
+  const { cartItems } = useCart();
 
   return (
     <div className="relative"> {/* Relative positioning to ensure our modal is positioned relative to Navbar */}
@@ -106,6 +108,9 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <div>
+        Cart Items: {cartItems.length}
+      </div>
       </nav>
 
       {showAuth && <AuthComponent onClose={() => setShowAuth(false)} />}

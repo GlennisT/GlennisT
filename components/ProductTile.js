@@ -35,13 +35,13 @@
 
 
 import React from 'react';
-
+import { useCart } from '@/contexts/CartContext';
 const JewelryTile = ({ jewelry }) => {
   const { JewelryName, JewelryImageUrl, Price, Description } = jewelry;
+  const { addToCart } = useCart(); // Use the addToCart function from context
 
   const handleAddToCart = () => {
-    // Implement the add to cart functionality later
-    console.log('Added to cart:', JewelryName);
+    addToCart(jewelry);
   };
 
   return (
